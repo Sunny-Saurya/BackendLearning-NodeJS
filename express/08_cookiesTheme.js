@@ -3,6 +3,7 @@ const app = express();
 import cookieParser from 'cookie-parser';
 app.use(express.static('public'))
 app.use(cookieParser())
+
 app.get('/set-theme/:mode', (req, res) => {
     const theme = req.params.mode === 'dark'? 'dark': 'light'
     res.cookie('theme', theme);
@@ -12,7 +13,6 @@ app.get('/set-theme/:mode', (req, res) => {
 app.get('/', (req, res) => {
     const theme = req.cookies.theme;
     res.send(`
-        
         <head>
             <link rel = "stylesheet" href = "style.css"
             <body>
