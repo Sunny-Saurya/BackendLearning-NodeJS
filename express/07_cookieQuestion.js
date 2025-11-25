@@ -17,12 +17,10 @@ app.get("/cookies", (req, res) => {
 
 app.post('/set-cookies', (req, res) => {
     const {course, username} = req.body;
-
     res.cookie('course',course, {maxAge: 10000})
     res.cookie('username', username, {maxAge: 10000})
     res.send("Cookies have been seet for 1 minute !!")
     res.redirect('/cookies')
-
 })
 
 app.get('/clear-cookies', (req, res) => {
@@ -36,4 +34,3 @@ app.get('/clear-cookies', (req, res) => {
 app.listen(3000, () => {
     console.log('Server is running on port : http://localhost:3000/');  
 })
-
