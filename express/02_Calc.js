@@ -31,7 +31,7 @@ app.post("/submit", (req, res) => {
         res.send(`Ans: ${number1 / number2}`)
     }
     if(operator == '%'){
-        res.send(`${number2 % numb2}`)
+        res.send(`Ans: ${Number(number1) % Number(number2)}`)
     }
 })
 app.listen("3000", () => {
