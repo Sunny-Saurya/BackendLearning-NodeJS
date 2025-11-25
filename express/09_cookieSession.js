@@ -2,7 +2,6 @@ import express from 'express'
 const app = express();
 import cookieSession from 'cookie-session';
 app.use(cookieSession({
-    // certain properties will be there
     name: 'mySession',
     keys: ['key1', 'key2'],
     // maxAge: 60000;
