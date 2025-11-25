@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temperature Converter</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      width: 320px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    button {
+      background: #4a90e2;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #357ac8;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Temperature Converter</h2>
+
+    <form action="/converter" method="post">
+      <input type="number" name="name" placeholder="Enter temperature">
+
+      <select name="select">
+        <option name="option1" value="c_to_f">Celsius ➝ Fahrenheit</option>
+        <option name="option2" value="f_to_c">Fahrenheit ➝ Celsius</option>
+      </select>
+
+      <button type="submit">Convert</button>
+    </form>
+  </div>
+
+</body>
+</html>
