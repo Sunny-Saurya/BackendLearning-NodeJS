@@ -1,0 +1,90 @@
+# =========================
+# Node / Backend
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+*.log
+.tmp/
+dist/
+build/
+coverage/
+.env
+.env.*
+!.env.example
+
+# Prisma
+prisma/*.db
+prisma/migrations/
+
+# =========================
+# Frontend (React / Vite / Next.js)
+# =========================
+# Node modules already ignored above
+dist/
+build/
+.cache/
+.next/
+out/
+.vite/
+vite.config.ts.timestamp*
+
+# Production files
+*.local
+*.cache
+*.DS_Store
+
+# =========================
+# OS & Editor files
+# =========================
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+*.swp
+*.swo
+
+# =========================
+# Temporary files
+# =========================
+*.pid
+*.seed
+*.seed.json
+*.tgz
+
+# =========================
+# TypeScript
+# =========================
+*.tsbuildinfo
+
+# =========================
+# Uploads / Temp storage
+# =========================
+uploads/
+public/uploads/
+temp/
+tmp/
+
+# =========================
+# Serverless / Docker
+# =========================
+.serverless/
+.docker/
+docker-compose.override.yml
+
+# =========================
+# Generated files
+# =========================
+*.pem
+*.key
+*.crt
+
+# =========================
+# MongoDB
+# =========================
+dump/
