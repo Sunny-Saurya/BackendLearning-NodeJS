@@ -27,8 +27,8 @@ app.get('/clear-cookies', (req, res) => {
     // const{course, username} = req.body;
     res.clearCookie("course");
     res.clearCookie("username");
-    res.send("Cookies Cleared !!")
-    res.redirect('/cookies')
+    res.send("Cookies Cleared !!");
+    res.redirect('/cookies');
 })
 
 app.listen(3000, () => {
