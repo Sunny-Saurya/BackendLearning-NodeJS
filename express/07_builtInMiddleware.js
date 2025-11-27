@@ -11,8 +11,7 @@ app.get('/set', (req, res) => {
 
 app.get('/fetch', (req, res) => {
     console.log(req.cookies);
-    res.send( "Cooking Fetched !!"
-    )
+    res.send( "Cooking Fetched !!")
 })
 
 app.get('/clear', (req, res) => {
