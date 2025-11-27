@@ -2,6 +2,7 @@ import express from 'express'
 const app = express();
 import cookieSession from 'cookie-session';
 let count = 0;
+
 app.use(cookieSession({
     name: 'mySession',
     keys : ['key1', 'key2']
