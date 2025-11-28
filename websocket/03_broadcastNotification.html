@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broadcasting</title>
+</head>
+<body>
+
+    <p class="para"></p>
+    <script src="/socket.io/socket.io.js"></script>
+    <h1>WebSocket Broadcasting Example</h1>
+    <p>This example demonstrates broadcasting messages to all connected WebSocket clients.</p>
+    <!-- want only html -->
+     <script>
+        const socket = io();
+        socket.on('connect', () => {
+            document.write('WebSocket connection established.<br>');
+            document.querySelector('.para').innerText = 'WebSocket connection established.';
+            console.log('Connected to server');
+        });
+        socket.on('broadcast', (data) => {
+            document.write(`Broadcast message received: ${data}<br>`);
+            document.querySelector('.para').innerText = `Broadcast message received: ${data}`;
+            console.log('Broadcast message received:', data);
+        });
+     </script>
+
+</body>
+</html>
