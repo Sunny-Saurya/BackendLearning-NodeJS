@@ -10,8 +10,8 @@ app.use(cookieSession({
 
 app.get('/login', (req, res) => {
     req.session.user = 'Sunny';
-    res.redirect('/dashboard')
-    res.send("The session is set. You are logged in !!");
+    // set session then redirect to dashboard
+    return res.redirect('/dashboard');
 })
 
 app.get('/dashboard', (req, res) => {
@@ -22,8 +22,9 @@ app.get('/dashboard', (req, res) => {
 })
 
 app.get('/logout',(req, res) => {
-    res.session = null
-    res.send("Logged Out Successfully !!")
+    // clear session
+    req.session = null;
+    res.send("Logged Out Successfully !!");
 })
 
-app.listen(3000);
+app.listen(3000, () => console.log('Server running on http://localhost:3000'));
