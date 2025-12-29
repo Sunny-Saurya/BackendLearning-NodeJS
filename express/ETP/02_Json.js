@@ -5,6 +5,7 @@ const user = {
     subject: 'Backend'
 }
 
+// object to json
 const jsonData = JSON.stringify(user);
 console.log(jsonData);
 
