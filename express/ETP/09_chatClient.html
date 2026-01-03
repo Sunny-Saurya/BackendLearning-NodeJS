@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Application</title>
+</head>
+<body>
+    <h2>WebSocket Send & Receive</h2>
+
+    <input type="text" id="msg" placeholder="Enter message..." />
+    <button onclick="sendMessage()">Send</button>
+
+    <p class="output"></p>
+
+    <script>
+        const socket = new WebSocket("ws://localhost:4000");
+
+        socket.onopen = () => {
+            console.log("Connected To Server !!");
+        };
+
+        socket.onmessage = (event) => {
+            document.getElementsByClassName('output')[0].innerText =
+                "Server: " + event.data;
+        };
+
+        socket.onclose = () => {
+            console.log("Connection Closed !!");
+        };
+
+        function sendMessage() {
+            const message = document.getElementById('msg').value;
+            socket.send(message);
+        }
+    </script>
+</body>
+</html>
