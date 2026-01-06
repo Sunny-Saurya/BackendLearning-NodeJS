@@ -1,0 +1,16 @@
+{
+  "name": "24_socketio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "socket": "^1.1.53",
+    "websocket": "^1.0.35"
+  }
+}
