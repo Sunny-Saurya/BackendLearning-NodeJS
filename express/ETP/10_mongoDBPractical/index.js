@@ -15,16 +15,18 @@ const studentSchema = new mongoose.Schema({
     section: String,
     rollNo: Number,
     course: String
+
 })
+
 
 const Students = mongoose.model("Students", studentSchema)
 
-// for inserting 
+// for inserting the user
 
 const insertingStudent = async () => {
     const student = new Students({
         name: "Sunny",
-        section: "K23NC",
+        section: "K23NC ",
         rollNo: 1,
         course: "CSE",
     })
