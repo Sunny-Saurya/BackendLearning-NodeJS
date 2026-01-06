@@ -34,7 +34,7 @@ app.get("/", (req, res) => {
         `)
 })
 
-app.post("/login", (req, res) => {
+app.post("/login ", (req, res) => {
 
     const {email, password} = req.body
 
