@@ -14,6 +14,7 @@ app.get("/", (req, res) => {
             <button type="submit" onclick= window.location.href='/answer'>Calculate</button>
             </form>
         `)
+        
 })
 
 app.post('/answer', (req, res) => {
