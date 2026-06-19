@@ -15,8 +15,6 @@ app.use(morganMiddleware);
 
 // users
 app.use("/api/auth", registerRoute);
-
-
 // notes
 
 app.use("/api/notes", noteRoute);
