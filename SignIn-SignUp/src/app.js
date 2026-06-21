@@ -3,6 +3,7 @@ const morgan = require("morgan");
 const app = express();
 const registerRoute = require("./routes/authRoute");
 const noteRoute = require("./routes/noteRoute");
+const aggregationRoute = require("./routes/aggregationRoute")
 
 const morganMiddleware = require("./middlewares/morganLogMiddleware");
 app.use(express.json());
@@ -18,5 +19,9 @@ app.use("/api/auth", registerRoute);
 // notes
 
 app.use("/api/notes", noteRoute);
+
+// gettting the notes using tags
+
+app.use("/api/aggregation", aggregationRoute);
 
 module.exports = app;
